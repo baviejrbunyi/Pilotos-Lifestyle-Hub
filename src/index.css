@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --angst-black: #0B0B0B;
+    --angst-dark: #141414;
+    --angst-pure-white: #FFFFFF;
+    --angst-muted-gray: #9CA3AF;
+    --angst-crema: #D8CBB9;
+    --angst-border: #262626;
+  }
+
+  body {
+    background-color: var(--angst-black);
+    color: var(--angst-pure-white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+.angst-card {
+  background-color: var(--angst-dark);
+  border: 1px solid var(--angst-border);
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.angst-card:hover {
+  border-color: rgba(216, 203, 185, 0.4);
+  transform: translateY(-2px);
+}
+
+.angst-button {
+  background-color: var(--angst-pure-white);
+  color: var(--angst-black);
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.angst-button:hover {
+  background-color: var(--angst-crema);
+}
+
+.angst-button-outline {
+  background-color: transparent;
+  color: var(--angst-pure-white);
+  border: 1px solid var(--angst-border);
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.angst-button-outline:hover {
+  border-color: var(--angst-pure-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D8CBB9;
+}
