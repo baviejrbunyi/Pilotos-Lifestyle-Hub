@@ -59,7 +59,7 @@ export default function App() {
                 PILOTOS
               </span>
               <span className="text-[10px] tracking-wider text-[#9CA3AF] uppercase block font-mono">
-                Lifestyle Hub &bull; 3 Branches
+                Lifestyle Hub
               </span>
             </div>
           </div>
@@ -76,39 +76,26 @@ export default function App() {
               onClick={() => switchView('branches')}
               className={`transition-colors ${currentView === 'branches' ? 'text-[#D8CBB9] font-bold' : 'text-[#9CA3AF] hover:text-[#FFFFFF]'}`}
             >
-              Branches (3)
+              Branches
             </button>
             <button
               onClick={() => switchView('cafe')}
               className={`transition-colors ${currentView === 'cafe' ? 'text-[#D8CBB9] font-bold' : 'text-[#9CA3AF] hover:text-[#FFFFFF]'}`}
             >
-              3D Café Menu
+              Cafe Menu
             </button>
             <button
               onClick={() => switchView('barbershop')}
               className={`transition-colors ${currentView === 'barbershop' ? 'text-[#D8CBB9] font-bold' : 'text-[#9CA3AF] hover:text-[#FFFFFF]'}`}
             >
-              Barbershop 2.0
-            </button>
-            <button
-              onClick={() => switchView('loyalty')}
-              className={`transition-colors ${currentView === 'loyalty' ? 'text-[#D8CBB9] font-bold' : 'text-[#9CA3AF] hover:text-[#FFFFFF]'}`}
-            >
-              Pilotos Pass
+              Barbershop
             </button>
 
           </nav>
 
           {/* Actions */}
           <div className="flex items-center space-x-3">
-            {/* Points badge */}
-            <button
-              onClick={() => switchView('loyalty')}
-              className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 bg-[#141414] border border-[#262626] text-xs font-mono rounded-md"
-            >
-              <Award className="w-3.5 h-3.5 text-[#D8CBB9]" />
-              <span className="text-[#D8CBB9] font-bold">{loyaltyPoints} PTS</span>
-            </button>
+            
 
             {/* Cart Button */}
             <button
@@ -122,15 +109,6 @@ export default function App() {
                   {cartItems.reduce((a, c) => a + c.quantity, 0)}
                 </span>
               )}
-            </button>
-
-            {/* Accessibility Settings */}
-            <button
-              onClick={() => setIsAccessibilityOpen(true)}
-              className="p-2.5 bg-[#141414] border border-[#262626] hover:border-[#D8CBB9] rounded-md transition-colors"
-              aria-label="Accessibility Settings"
-            >
-              <Settings className="w-5 h-5 text-[#FFFFFF]" />
             </button>
 
             {/* Book Barber Primary CTA */}
@@ -157,10 +135,9 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="lg:hidden bg-[#141414] border-b border-[#262626] px-6 py-6 space-y-3 font-medium">
             <button onClick={() => switchView('home')} className="block w-full text-left py-2 border-b border-[#262626]">Overview</button>
-            <button onClick={() => switchView('branches')} className="block w-full text-left py-2 border-b border-[#262626]">Branches (3)</button>
-            <button onClick={() => switchView('cafe')} className="block w-full text-left py-2 border-b border-[#262626]">3D Café Menu</button>
-            <button onClick={() => switchView('barbershop')} className="block w-full text-left py-2 border-b border-[#262626]">Barbershop 2.0</button>
-            <button onClick={() => switchView('loyalty')} className="block w-full text-left py-2 border-b border-[#262626]">Pilotos Pass ({loyaltyPoints} PTS)</button>
+            <button onClick={() => switchView('branches')} className="block w-full text-left py-2 border-b border-[#262626]">Branches</button>
+            <button onClick={() => switchView('cafe')} className="block w-full text-left py-2 border-b border-[#262626]">Cafe Menu</button>
+            <button onClick={() => switchView('barbershop')} className="block w-full text-left py-2 border-b border-[#262626]">Barbershop</button>
 
             <div className="pt-2">
               <button onClick={() => { setMobileMenuOpen(false); setIsBookingOpen(true); }} className="w-full py-3 angst-button text-center text-xs">
@@ -177,8 +154,6 @@ export default function App() {
         {currentView === 'branches' && <BranchesView onOpenBooking={() => setIsBookingOpen(true)} />}
         {currentView === 'cafe' && <CafeView onAddToCart={handleAddToCart} />}
         {currentView === 'barbershop' && <BarbershopView onOpenBooking={() => setIsBookingOpen(true)} />}
-        {currentView === 'loyalty' && <LoyaltyView points={loyaltyPoints} onAddPoints={handleAddPoints} />}
-        {currentView === 'crm' && <CrmView />}
       </main>
 
       {/* Footer */}
@@ -198,11 +173,6 @@ export default function App() {
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
         initialBranchId="barbershop-2"
-      />
-
-      <AccessibilityModal
-        isOpen={isAccessibilityOpen}
-        onClose={() => setIsAccessibilityOpen(false)}
       />
 
     </div>

@@ -13,10 +13,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenBooking })
       {/* Hero Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-[#141414] border border-[#262626] text-xs font-mono text-[#D8CBB9] rounded-full">
-            <span className="w-2 h-2 rounded-full bg-[#D8CBB9] animate-pulse" />
-            <span>3 Specialty Hubs Across Batangas City</span>
-          </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight uppercase leading-[1.1]">
             PILOTOS <br />
@@ -33,7 +29,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenBooking })
               className="px-6 py-3.5 angst-button text-sm flex items-center space-x-2 shadow-lg"
             >
               <Coffee className="w-4 h-4" />
-              <span>Explore 3D Café Menu</span>
+              <span>Explore Cafe Menu</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -42,7 +38,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenBooking })
               className="px-6 py-3.5 angst-button-outline text-sm flex items-center space-x-2"
             >
               <MapPin className="w-4 h-4 text-[#D8CBB9]" />
-              <span>View 3 Branches</span>
+              <span>View Branches</span>
             </button>
           </div>
         </div>
@@ -57,46 +53,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenBooking })
           </div>
         </div>
       </div>
-
-      {/* Feature Navigation Cards */}
-      <div className="pt-6 border-t border-[#262626]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <div onClick={() => onNavigate('branches')} className="angst-card p-6 lg:p-8 cursor-pointer group bg-[#141414]">
-            <MapPin className="w-7 h-7 text-[#D8CBB9] mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold mb-2 uppercase">Our 3 Branches</h3>
-            <p className="text-xs sm:text-sm text-[#9CA3AF] mb-4 leading-relaxed">
-              View precise operating hours, addresses, and maps for Pilotos Grounds, Afterhours, and Barbershop 2.0.
-            </p>
-            <span className="text-xs font-semibold text-[#D8CBB9] flex items-center gap-1">
-              View Locations &rarr;
-            </span>
-          </div>
-
-          <div onClick={() => onNavigate('cafe')} className="angst-card p-6 lg:p-8 cursor-pointer group bg-[#141414]">
-            <Coffee className="w-7 h-7 text-[#D8CBB9] mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold mb-2 uppercase">3D Café Menu</h3>
-            <p className="text-xs sm:text-sm text-[#9CA3AF] mb-4 leading-relaxed">
-              Browse our signature specialty coffee, pastas, pastries, and power bowls in an immersive slideshow format.
-            </p>
-            <span className="text-xs font-semibold text-[#D8CBB9] flex items-center gap-1">
-              Explore 3D Menu &rarr;
-            </span>
-          </div>
-
-          <div onClick={() => onNavigate('barbershop')} className="angst-card p-6 lg:p-8 cursor-pointer group bg-[#141414]">
-            <Scissors className="w-7 h-7 text-[#D8CBB9] mb-3 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-bold mb-2 uppercase">Barbershop 2.0</h3>
-            <p className="text-xs sm:text-sm text-[#9CA3AF] mb-4 leading-relaxed">
-              Explore grooming services like Korean Down Perms and precision fades, and book your appointment online.
-            </p>
-            <span className="text-xs font-semibold text-[#D8CBB9] flex items-center gap-1">
-              Book Barbershop &rarr;
-            </span>
-          </div>
-
-        </div>
-      </div>
+      
 
     </div>
   );

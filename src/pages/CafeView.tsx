@@ -37,9 +37,9 @@ export const CafeView: React.FC<CafeViewProps> = ({ onAddToCart }) => {
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto space-y-3">
         <span className="text-xs uppercase tracking-wider text-[#D8CBB9] font-mono">Pilotos Grounds & Afterhours Café</span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold uppercase">3D CAFÉ MENU SLIDESHOW</h1>
+        <h1 className="text-3xl sm:text-4xl font-extrabold uppercase">CAFE MENU</h1>
         <p className="text-sm text-[#9CA3AF]">
-          Experience our artisan specialty beverages, pastas, and power bowls one by one in high-definition 3D perspective view.
+          Experience our artisan specialty beverages, pastas, and power bowls.
         </p>
 
         {/* Category filters */}

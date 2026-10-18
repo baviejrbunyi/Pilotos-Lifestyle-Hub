@@ -29,17 +29,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-3 font-mono text-xs">
-            <h4 className="font-['Syne'] font-bold text-sm text-[#FFFFFF] uppercase tracking-wider">Hub Navigation</h4>
-            <ul className="space-y-2">
-              <li><a href="#branches" className="hover:text-[#D8CBB9] transition-colors">Petron Pallocan Main</a></li>
-              <li><a href="#branches" className="hover:text-[#D8CBB9] transition-colors">Petron Alangilan Express</a></li>
-              <li><a href="#cafe" className="hover:text-[#D8CBB9] transition-colors">Café Specialty Menu</a></li>
-              <li><a href="#loyalty" className="hover:text-[#D8CBB9] transition-colors">Pilotos Unified Pass</a></li>
-              <li><a href="#crm-strategy" className="hover:text-[#D8CBB9] transition-colors">CRM Integration Blueprint</a></li>
-            </ul>
-          </div>
+          
 
           {/* Locations */}
           <div className="space-y-3 font-mono text-xs">
