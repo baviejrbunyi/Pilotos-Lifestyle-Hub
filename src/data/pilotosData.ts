@@ -101,7 +101,7 @@ export const CAFE_MENU: MenuItem[] = [
     price: 260,
     description: 'Al dente fettuccine tossed in rich white truffle oil, wild mushrooms, and aged parmesan shavings.',
     tags: ['Chef Special', 'Savory'],
-    image: 'https://www.girlgonegourmet.com/truffle-mushroom-pasta/',
+    image: 'https://i0.wp.com/www.sweetteaandthyme.com/wp-content/uploads/2024/02/truffle-mushroom-pasta-overhead-on-tray.jpg?w=1200&ssl=1',
     branchAvailability: ['Afterhours']
   },
   {
