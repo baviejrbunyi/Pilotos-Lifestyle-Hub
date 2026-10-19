@@ -65,7 +65,7 @@ export default function App() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium absolute left-1/2 -translate-x-1/2">
             <button
               onClick={() => switchView('home')}
               className={`transition-colors ${currentView === 'home' ? 'text-[#D8CBB9] font-bold' : 'text-[#9CA3AF] hover:text-[#FFFFFF]'}`}
